@@ -5,12 +5,12 @@ using System.Linq;
 namespace WixSharp
 {
     /// <summary>
-    /// 
+    /// Returns path to latest version of NuGet package by name.
     /// </summary>
     public static class PackageLocator
     {
         /// <summary>
-        /// 
+        /// Returns path to latest version of NuGet package by name.
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>

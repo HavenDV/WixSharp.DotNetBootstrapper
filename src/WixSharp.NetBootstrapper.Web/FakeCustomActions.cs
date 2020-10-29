@@ -3,12 +3,12 @@
 namespace WixSharp
 {
     /// <summary>
-    /// 
+    /// This requires only for WixSharp reference.
     /// </summary>
     public static class EmptyCustomActions
     {
         /// <summary>
-        /// 
+        /// This requires only for WixSharp reference.
         /// </summary>
         /// <param name="_"></param>
         /// <returns></returns>

@@ -1,18 +1,17 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using WixSharp.CommonTasks;
 using WixSharp.Nsis;
 
 namespace WixSharp
 {
     /// <summary>
-    /// 
+    /// Creates NSIS bootstrapper with selected .NET version.
     /// </summary>
     public static class NetBootstrapper
     {
         /// <summary>
-        /// 
+        /// Creates .exe NSIS bootstrapper with selected .NET version.
         /// </summary>
         /// <param name="project"></param>
         /// <param name="version"></param>
@@ -34,7 +33,7 @@ namespace WixSharp
         }
 
         /// <summary>
-        /// 
+        /// Creates .msi and .exe NSIS bootstrapper with selected .NET version. Sets NetFxPrerequisite.
         /// </summary>
         /// <param name="project"></param>
         /// <param name="version"></param>

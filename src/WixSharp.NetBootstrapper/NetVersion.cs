@@ -3,29 +3,29 @@
 namespace WixSharp
 {
     /// <summary>
-    /// 
+    /// Describes .Net Framework version.
     /// </summary>
     public class NetVersion
     {
         #region Properties
 
         /// <summary>
-        /// 
+        /// PrerequisiteFile.
         /// </summary>
         public string PrerequisiteFile { get; set; }
 
         /// <summary>
-        /// 
+        /// PrerequisiteRegKeyValue.
         /// </summary>
         public string PrerequisiteRegKeyValue { get; set; }
 
         /// <summary>
-        /// 
+        /// Condition.
         /// </summary>
         public Condition Condition { get; set; }
 
         /// <summary>
-        /// 
+        /// ErrorMessage.
         /// </summary>
         public string ErrorMessage { get; set; }
 
@@ -34,7 +34,7 @@ namespace WixSharp
         #region Constructors
 
         /// <summary>
-        /// 
+        /// Creates new version.
         /// </summary>
         /// <param name="prerequisiteFile"></param>
         /// <param name="prerequisiteRegKeyValue"></param>
