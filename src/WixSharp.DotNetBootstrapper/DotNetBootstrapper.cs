@@ -8,7 +8,7 @@ namespace WixSharp
     /// <summary>
     /// Creates NSIS bootstrapper with selected .NET version.
     /// </summary>
-    public static class NetBootstrapper
+    public static class DotNetBootstrapper
     {
         /// <summary>
         /// Creates .exe NSIS bootstrapper with selected .NET version.
@@ -16,7 +16,7 @@ namespace WixSharp
         /// <param name="project"></param>
         /// <param name="version"></param>
         /// <returns></returns>
-        public static string BuildExe(Project project, NetVersion version)
+        public static string BuildExe(Project project, DotNetVersion version)
         {
             Environment.SetEnvironmentVariable("WIXSHARP_NSISDIR", Path.Combine(
                 PackageLocator.GetLatestVersionPath("NSIS-Tool"), 
@@ -38,7 +38,7 @@ namespace WixSharp
         /// <param name="project"></param>
         /// <param name="version"></param>
         /// <returns></returns>
-        public static string Build(Project project, NetVersion version)
+        public static string Build(Project project, DotNetVersion version)
         {
             project.SetNetFxPrerequisite(version.Condition, version.ErrorMessage);
             Compiler.BuildMsi(project);

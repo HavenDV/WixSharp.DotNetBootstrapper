@@ -5,7 +5,7 @@ namespace WixSharp
     /// <summary>
     /// Describes .Net Framework version.
     /// </summary>
-    public class NetVersion
+    public class DotNetVersion
     {
         #region Properties
 
@@ -40,7 +40,7 @@ namespace WixSharp
         /// <param name="prerequisiteRegKeyValue"></param>
         /// <param name="condition"></param>
         /// <param name="errorMessage"></param>
-        public NetVersion(string prerequisiteFile, string prerequisiteRegKeyValue, Condition condition, string errorMessage)
+        public DotNetVersion(string prerequisiteFile, string prerequisiteRegKeyValue, Condition condition, string errorMessage)
         {
             PrerequisiteFile = prerequisiteFile ?? throw new ArgumentNullException(nameof(prerequisiteFile));
             PrerequisiteRegKeyValue = prerequisiteRegKeyValue ?? throw new ArgumentNullException(nameof(prerequisiteRegKeyValue));

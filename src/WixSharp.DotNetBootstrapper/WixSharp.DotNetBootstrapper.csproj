@@ -10,18 +10,18 @@
   </PropertyGroup>
 
   <PropertyGroup Label="NuGet">
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageId>WixSharp.NetBootstrapper</PackageId>
+    <PackageId>WixSharp.DotNetBootstrapper</PackageId>
     <Description>Allows you to create a bootstrapper for an msi file in one line, simply by specifying the required .Net version</Description>
     <Authors>havendv</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageLicenseFile></PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/HavenDV/WixSharp.NetBootstrapper</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/HavenDV/WixSharp.NetBootstrapper</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/HavenDV/WixSharp.DotNetBootstrapper</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/HavenDV/WixSharp.DotNetBootstrapper</RepositoryUrl>
     <PackageTags>wixsharp, bootstrapper</PackageTags>
     <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
   </PropertyGroup>

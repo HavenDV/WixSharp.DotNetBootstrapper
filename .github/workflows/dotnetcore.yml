@@ -26,8 +26,8 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --nologo
       
-    - name: Try Publish(if the version has changed) WixSharp.NetBootstrapper
-      run: dotnet nuget push src\WixSharp.NetBootstrapper\bin\Release\WixSharp.NetBootstrapper.*.nupkg -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json; exit 0
+    - name: Try Publish(if the version has changed) WixSharp.DotNetBootstrapper
+      run: dotnet nuget push src\WixSharp.DotNetBootstrapper\bin\Release\WixSharp.DotNetBootstrapper.*.nupkg -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json; exit 0
       
-    - name: Try Publish(if the version has changed) WixSharp.NetBootstrapper.Web
-      run: dotnet nuget push src\WixSharp.NetBootstrapper.Web\bin\Release\WixSharp.NetBootstrapper.Web.*.nupkg -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json; exit 0
+    - name: Try Publish(if the version has changed) WixSharp.DotNetBootstrapper.Web
+      run: dotnet nuget push src\WixSharp.DotNetBootstrapper.Web\bin\Release\WixSharp.DotNetBootstrapper.Web.*.nupkg -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json; exit 0
