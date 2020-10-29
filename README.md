@@ -8,11 +8,11 @@ Install-Package WixSharp.DotNetBootstrapper.Web
 
 # Usage
 ```cs
-NetBootstrapper.Build(project, WebVersions.Net472);
+DotNetBootstrapper.Build(project, WebVersions.Net472);
 
 // This is equivalent to
 project.SetNetFxPrerequisite(version.Condition, version.ErrorMessage);
 Compiler.BuildMsi(project);
 
-NetBootstrapper.BuildExe(project, version);
+DotNetBootstrapper.BuildExe(project, version);
 ```
