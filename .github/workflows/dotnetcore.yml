@@ -28,3 +28,6 @@ jobs:
       
     - name: Try Publish(if the version has changed) WixSharp.NetBootstrapper
       run: dotnet nuget push src\WixSharp.NetBootstrapper\bin\Release\WixSharp.NetBootstrapper.*.nupkg -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json; exit 0
+      
+    - name: Try Publish(if the version has changed) WixSharp.NetBootstrapper.Web
+      run: dotnet nuget push src\WixSharp.NetBootstrapper.Web\bin\Release\WixSharp.NetBootstrapper.Web.*.nupkg -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json; exit 0
