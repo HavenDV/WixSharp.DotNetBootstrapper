@@ -19,16 +19,9 @@ namespace WixSharp
         /// <returns></returns>
         public static string BuildExe(Project project, NetVersion version)
         {
-            var packagePath = @"%userprofile%\.nuget\packages\NSIS-Tool".ExpandEnvVars();
-            var nsisVersion = Directory
-                .GetDirectories(packagePath)
-                .Select(Path.GetFileName)
-                .Select<string, Version?>(name => new Version(name))
-                .OrderDescending()
-                .FirstOrDefault() 
-                ?? throw new InvalidOperationException("Can't find NSIS-Tool package.");
-
-            Environment.SetEnvironmentVariable("WIXSHARP_NSISDIR", Path.Combine(packagePath, $@"{nsisVersion}\tools"));
+            Environment.SetEnvironmentVariable("WIXSHARP_NSISDIR", Path.Combine(
+                PackageLocator.GetLatestVersionPath("NSIS-Tool"), 
+                "tools"));
 
             return new NsisBootstrapper
             {
