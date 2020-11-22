@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net4.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Label="NuGet">
+    <Version>1.0.7</Version>
+    <Description>Allows you to create a bootstrapper for an msi file in one line, simply by specifying the required .Net version</Description>
+    <PackageTags>wixsharp, bootstrapper, web</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="net-installers\web\*.exe">
+      <Pack>true</Pack>
+      <PackagePath>net-installers\web\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WixSharp.DotNetBootstrapper\WixSharp.DotNetBootstrapper.csproj" />
+  </ItemGroup>
+
+</Project>

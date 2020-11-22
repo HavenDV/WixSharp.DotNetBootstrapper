@@ -18,6 +18,9 @@ namespace WixSharp
         /// <returns></returns>
         public static string BuildExe(Project project, DotNetVersion version)
         {
+            project = project ?? throw new ArgumentNullException(nameof(project));
+            version = version ?? throw new ArgumentNullException(nameof(version));
+
             Environment.SetEnvironmentVariable("WIXSHARP_NSISDIR", Path.Combine(
                 PackageLocator.GetLatestVersionPath("NSIS-Tool"), 
                 "tools"));
@@ -40,6 +43,9 @@ namespace WixSharp
         /// <returns></returns>
         public static string Build(Project project, DotNetVersion version)
         {
+            project = project ?? throw new ArgumentNullException(nameof(project));
+            version = version ?? throw new ArgumentNullException(nameof(version));
+
             project.SetNetFxPrerequisite(version.Condition, version.ErrorMessage);
             Compiler.BuildMsi(project);
 
