@@ -40,11 +40,17 @@ namespace WixSharp
         /// </summary>
         /// <param name="project"></param>
         /// <param name="version"></param>
+        /// <param name="setClientAssembly"></param>
         /// <returns></returns>
-        public static string Build(Project project, DotNetVersion version)
+        public static string Build(Project project, DotNetVersion version, bool setClientAssembly = true)
         {
             project = project ?? throw new ArgumentNullException(nameof(project));
             version = version ?? throw new ArgumentNullException(nameof(version));
+
+            if (setClientAssembly)
+            {
+                Compiler.ClientAssembly = System.Reflection.Assembly.GetEntryAssembly()?.Location ?? Compiler.ClientAssembly;
+            }
 
             project.SetNetFxPrerequisite(version.Condition, version.ErrorMessage);
             Compiler.BuildMsi(project);
