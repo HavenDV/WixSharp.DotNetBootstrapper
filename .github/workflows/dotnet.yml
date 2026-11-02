@@ -9,6 +9,9 @@ jobs:
         os: [ windows-latest ]
 
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+      id-token: write
     name: ${{ matrix.os }} - ${{ matrix.dotnet }}
     env:
       DOTNET_NOLOGO: true
@@ -28,9 +31,15 @@ jobs:
     - name: Run tests
       run: dotnet test --configuration Release --nologo
         
+    - name: NuGet login (trusted publishing)
+      id: nuget_login
+      uses: NuGet/login@v1
+      with:
+        user: havendv
+
     - name: Publish
       run: dotnet nuget push
         src\**.nupkg
-        --api-key ${{ secrets.NUGET_KEY }}
+        --api-key ${{ steps.nuget_login.outputs.NUGET_API_KEY }}
         --source https://api.nuget.org/v3/index.json
         --skip-duplicate
